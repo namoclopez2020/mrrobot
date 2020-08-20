@@ -42,25 +42,11 @@ if(isset($_GET['id'])){
 <html>
 	<head>
 	<?php include ("./layouts/header.php");?>
-			<!--BOTON DESPLEGABLE-->
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--FIN BOTON DESPLEGABLE-->
+		
 	</head>
      
 <body>
-<div class="fixed-action-btn">
-  <a class="btn-floating btn-large red">
-    <i class="large material-icons">mode_edit</i>
-  </a>
-  <ul><!--
-    <li><a href="admin.php" class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>-->
-    <li><a href="admin.php" class="btn-floating blue"><i class="material-icons">arrow_back</i></a></li>
-    <li><a href="configuracion.php" class="btn-floating green"><i class="material-icons">build</i></a></li>
-  </ul>
-</div>
+
    <!-- <div class="container-fluid">-->
     <header >
   <?php include ("./layouts/nav.php");?>
@@ -192,19 +178,16 @@ if(isset($_GET['id'])){
 
 
 <script type="text/javascript" src="js/buscar_egresos.js"></script>
-<!-- BOTON DEPLEGABLE-->
-<script type="text/javascript" src="js/materialize.min.js"></script>
- <!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 <script>
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, {
-      direction: 'top',
-      hoverEnabled: false
-    });
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.fixed-action-btn');
+//     var instances = M.FloatingActionButton.init(elems, {
+//       direction: 'top',
+//       hoverEnabled: false
+//     });
+//   });
 
 </script>
 <!--FIN BOTON DEPLEGABLE-->

@@ -27,8 +27,8 @@ $wsp_sucursal=$_SESSION['wsp_sucursal'];
 
    <!-- <div class="container-fluid">-->
     <header >
-  <?php include ("./layouts/nav.php");?>
-   </header>
+        <?php include ("./layouts/nav.php");?>
+    </header>
     
      <div  class="container-fluid" >
            
