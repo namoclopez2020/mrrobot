@@ -23,14 +23,7 @@
           <li><a href="status_equipo.php">Status equipo</a></li>
         </ul>
       </li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ventas
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="nueva_venta.php">Nueva venta</a></li>
-          <li><a href="facturas.php">Lista de ventas</a></li>
-        </ul>
-      </li>
+      
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ventas
         <span class="caret"></span></a>
