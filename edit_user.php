@@ -3,8 +3,7 @@
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
    page_require_level(1);
-?>
-<?php
+
   $e_user = find_by_id('users',(int)$_GET['id']);
   $groups  = find_all('user_groups');
   $all_sucursales=find_all('sucursales');
@@ -12,9 +11,7 @@
     $session->msg("d","Missing user id.");
     redirect('users.php');
   }
-?>
 
-<?php
 //Update User basic info
   if(isset($_POST['update'])) {
     $req_fields = array('name','username','level');
@@ -40,8 +37,7 @@
       redirect('edit_user.php?id='.(int)$e_user['id'],false);
     }
   }
-?>
-<?php
+
 // Update user password
 if(isset($_POST['update-pass'])) {
   $req_fields = array('password');
@@ -64,14 +60,11 @@ if(isset($_POST['update-pass'])) {
     redirect('edit_user.php?id='.(int)$e_user['id'],false);
   }
 }
-
 ?>
 <head>
-  <?php include ("./layouts/header.php");?>
-    
+  <?php include ("./layouts/header.php");?> 
   </head>
-<body>
-    
+<body> 
     <header>
     <?php include ("./layouts/nav.php");?>
   </header>
