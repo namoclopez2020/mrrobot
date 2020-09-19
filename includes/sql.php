@@ -697,8 +697,31 @@ function  monthlySalesByUser($year,$month,$usuario){
 
 function insertar_movimiento_producto($id_producto,$tipo_movimiento,$cantidad,$id_usuario,$fecha){
 	global $db;
-$sql= "INSERT INTO movimientos (id_tipo_movimiento,id_vendedor_mov,id_producto_mov,cantidad_mov,fecha_movimiento) VALUES ('$tipo_movimiento','$id_usuario','$id_producto','$cantidad','$fecha')";
-	 $insertar = $db->query($sql);
-    return($db->affected_rows() === 1 ? true : false);
+  $sql= "INSERT INTO movimientos (id_tipo_movimiento,id_vendedor_mov,id_producto_mov,cantidad_mov,fecha_movimiento) VALUES ('$tipo_movimiento','$id_usuario','$id_producto','$cantidad','$fecha')";
+  $insertar = $db->query($sql);
+  return($db->affected_rows() === 1 ? true : false);
+}
+
+function inventario(){
+  global $db;
+  $id_sucursal=$_SESSION['id_sucursal'];
+  $sql = "select m.file_name,p.quantity,p.id,p.date,p.codigo_producto,p.name as nombre_prod,p.buy_price,p.sale_price,p.media_id,p.categorie_id,p.id_sucursal,c.name as nombre_suc,s.nombre_sucursal 
+    from products as p 
+    inner join categories as c ON p.categorie_id=c.id 
+    inner join sucursales as s ON p.id_sucursal=s.id
+    left join media as m ON m.id = p.media_id 
+    where p.id_sucursal=$id_sucursal ORDER BY p.id";
+  $productos = find_by_sql($sql);
+  return $productos;
+
+}
+function valorTotalCompra(){
+  global $db;
+  $id_sucursal=$_SESSION['id_sucursal'];
+  $sql = "SELECT SUM(p.quantity*p.buy_price) as total_compra 
+    from products as p where p.id_sucursal = {$id_sucursal}";
+  $datos_generales = find_by_sql($sql);
+  return $datos_generales[0]['total_compra'];
+
 }
 ?>

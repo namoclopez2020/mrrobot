@@ -58,13 +58,12 @@ $all_tipo_movimiento=find_all('detalle_movimiento');
 					 	<thead>
 				<tr class="info">
 					<th>#</th>
-					<th>Producto</th>
+					
 					
 					<th>Fecha</th>
 					<th>Vendedor</th>
 					<th>Cantidad</th>
 					<th>Movimiento</th>
-					<th class='text-right'>Acciones</th>
 					
 				</tr>
 			</thead>
@@ -77,12 +76,12 @@ $all_tipo_movimiento=find_all('detalle_movimiento');
 					
 					echo "<tr>";
 					echo "<td>". $fila['id_movimiento'] ."</td>";
-					echo "<td>". $fila['pname'] ."</td>";
+				
 					echo "<td>". $fecha_movimiento ."</td>";
 					echo "<td>". $fila['uname'] ."</td>";
 					echo "<td>". $fila['cantidad_mov'] ."</td>";
 					echo "<td>". $fila['nombre_tipo_movimiento'] ."</td>";
-					echo '<td class="text-center"><a href=eliminar_movimiento.php?id_mov='.$fila['id_movimiento'].' class="btn btn-default" title="Eliminar" ><i class="glyphicon glyphicon-remove"></td>';
+					
 					echo "</tr>";
 								
 				}
