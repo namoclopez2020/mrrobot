@@ -94,20 +94,7 @@
                     }
 					        ?>
                 </tbody>        
-              </table>    
-              <table>
-                    
-                      <?php $categorias = listaProductosVigentes();
-                        foreach($categorias as $valor){
-                          echo "<tr>";
-                          echo "<td>";
-                          echo $valor['productos'][0];
-                          echo "</td>";
-                          echo "</tr>";
-                        }
-                      ?>
-                 
-              </table>              
+              </table>          
             </div>
 			  </div>
 			</div>	
