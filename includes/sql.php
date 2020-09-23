@@ -724,4 +724,36 @@ function valorTotalCompra(){
   return $datos_generales[0]['total_compra'];
 
 }
+
+function listaProductosVigentes(){
+  global $db;
+  $id_sucursal=$_SESSION['id_sucursal'];
+  $sql = "select p.categorie_id as cat, p.name as nombre
+    from products as p 
+    inner join sucursales as s ON p.id_sucursal=s.id
+    where p.id_sucursal=$id_sucursal and p.quantity > 0 ORDER BY p.id";
+
+  $productos = find_by_sql($sql);
+  $sql_cat = "SELECT * FROM categories";
+
+  $categorias = find_by_sql($sql_cat);
+
+  foreach($categorias as $clave => $valor){
+    $categorias[$clave]['productos'] = [];
+  }
+  foreach ($productos as $valor) {
+    $key = array_search($valor['cat'], array_column($categorias,'id'));
+    if(($key)||($key===0)){
+      array_push($categorias[$key]['productos'],$valor['nombre']);
+    }
+   
+  }
+  foreach ($categorias as $key => $value) {
+    if(count($value['productos']) === 0){
+      unset($categorias[$key]);
+    }
+  }
+  return $categorias;
+
+}
 ?>

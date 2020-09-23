@@ -25,7 +25,8 @@
 				    <div class="modal-content">
 				      <div class="modal-header">
 					    <a href="add_product.php" class="btn btn-primary">Agregar producto</a>
-              <a href="./FPDF/reportes/reporte_inventario.php" class="btn btn-info pull-right">Reporte</a>
+              <a href="./FPDF/reportes/reporte_inventario.php" class="btn btn-warning " style="margin-right:30">Reporte</a>
+              <a href="./FPDF/reportes/lista_productos.php" class="btn btn-success pull-right" style="margin-left:10px">Exportar Lista</a>
 				    </div>
 				  <div class="modal-body">
 					<div class="table-responsive">        
@@ -93,7 +94,20 @@
                     }
 					        ?>
                 </tbody>        
-              </table>                  
+              </table>    
+              <table>
+                    
+                      <?php $categorias = listaProductosVigentes();
+                        foreach($categorias as $valor){
+                          echo "<tr>";
+                          echo "<td>";
+                          echo $valor['productos'][0];
+                          echo "</td>";
+                          echo "</tr>";
+                        }
+                      ?>
+                 
+              </table>              
             </div>
 			  </div>
 			</div>	
