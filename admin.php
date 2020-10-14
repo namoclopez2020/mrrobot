@@ -64,27 +64,22 @@ $wsp_sucursal=$_SESSION['wsp_sucursal'];
              <!--FIN CONTENEDOR ORDENES DE SERVICIO-->
 
             <a href="egresos.php" class="taco tacoC" >
-              
                 <div class="taco-contador" >
                   <span class="taco-titulo" >
                     Egresos.
-					
-                </span>      
+                    </span>      
                 </div>
                 <div class="taco-dato"><br>
-					Lista De Egreso.<br>
-					Agregar Egreso.<br>
+					Lista De egresos.<br>
+					Agregar egresos.<br>
 					<img alt="imglogon" class="imagen-tacoA" src="uploads/empresa/3.png">
-                    <!--<img alt="imglogon" class="imagen-taco" src="./libs/2.png">-->
                 </div>
             </a>
             <a href="cliente.php" class="taco tacoC">
-              
                 <div class="taco-contador"  >
                   <span class="taco-titulo">
-                    Clientes.
-                    
-                </span>      
+                        Clientes.
+                    </span>      
                 </div>
                 <div class="taco-dato"><br>
                     Agregar Clientes.<br>

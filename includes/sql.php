@@ -756,4 +756,14 @@ function listaProductosVigentes(){
   return $categorias;
 
 }
+
+function cajaActual(){
+  global $db;
+  $id_sucursal=$_SESSION['id_sucursal'];
+  $sql = "SELECT SUM(p.quantity*p.buy_price) as total_compra 
+    from products as p where p.id_sucursal = {$id_sucursal}";
+  $datos_generales = find_by_sql($sql);
+  return $datos_generales[0]['total_compra'];
+
+}
 ?>

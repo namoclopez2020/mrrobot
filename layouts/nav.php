@@ -54,6 +54,7 @@
         <ul class="dropdown-menu">
           <li><a href="reporte_diario.php">Reporte diario</a></li>
           <li><a href="./cierre_de_caja.php">Cierre De Caja Diario</a></li>
+          <li><a href="./caja_actual.php">Caja Actual de Ventas</a></li>
         </ul>
       </li>
     </ul>

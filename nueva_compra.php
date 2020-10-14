@@ -65,7 +65,7 @@ $page_title = 'Nueva factura';
 							</div>
 							<label for="fecha" class="col-md-1 control-label">Fecha</label>
 							<div class="col-md-2">
-								 <input type="text" class="datepicker form-control" name="fecha" id="fecha"  autocomplete="off">
+								 <input type="text" class="form-control input-sm" name="fecha" id="fecha"  value="<?php echo date("d/m/Y");?>" readonly>
 								
 							</div>
 							<label for="email" class="col-md-1 control-label">Pago</label>
