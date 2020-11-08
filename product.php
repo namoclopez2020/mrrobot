@@ -7,9 +7,7 @@
   //capturar datos de la sucursal
   $all_products = inventario();
 ?>
-
 <!DOCTYPE html>
-
 <html lang="es">
   <head>
 	  <?php include ("./layouts/header.php");?>	

@@ -21,12 +21,7 @@
 
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-
-   
     <title><?php echo  $page_title;?></title>
-  
- 
-	
  	<!--estilos de bootstrap 3 <meta name="theme-color" content="#ffffff">-->
  	
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/> 
@@ -45,10 +40,4 @@
  <!--estilos de la aplicacion -->          
 <link rel="stylesheet" href="libs/css/main.css" />
 <link href="./libs/css/bootstrap-annual.css" rel="stylesheet">  
-<link rel="stylesheet" type="text/css" href="./libs/css/style.css">
-
-
-        
-
-    
- 	 
+<link rel="stylesheet" type="text/css" href="./libs/css/style.css"> 	 
