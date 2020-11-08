@@ -4,18 +4,17 @@
   // Checkin What level user has permission to view this page
    page_require_level(1);
 
-$product = find_by_id('products',(int)$_GET['id']);
-$all_categories = find_all('categories');
-$all_photo = find_all('media');
-$all_providers= find_all('proveedor');
-$all_sucursal=find_all('sucursales');
+  $product = find_by_id('products',(int)$_GET['id']);
+  $all_categories = find_all('categories');
+  $all_photo = find_all('media');
+  $all_providers= find_all('proveedor');
+  $all_sucursal=find_all('sucursales');
 
-if(!$product){
-  $session->msg("d","Missing product id.");
-  redirect('product.php');
-}
-?>
-<?php
+  if(!$product){
+    $session->msg("d","Missing product id.");
+    redirect('product.php');
+  }
+
  if(isset($_POST['product'])){
     $req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );
     validate_fields($req_fields);
@@ -56,19 +55,15 @@ if(!$product){
    }
 
  }
-
 ?>
 <head>
   <?php include ("./layouts/header.php");?>
-    
   </head>
 <body>
-    
     <header>
     <?php include ("./layouts/nav.php");?>
   </header>
    <div  class="container-fluid" style="padding-top: 60px">
-  
 <div class="row">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>

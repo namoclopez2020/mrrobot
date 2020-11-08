@@ -710,7 +710,25 @@ function inventario(){
     inner join categories as c ON p.categorie_id=c.id 
     inner join sucursales as s ON p.id_sucursal=s.id
     left join media as m ON m.id = p.media_id 
-    where p.id_sucursal=$id_sucursal ORDER BY p.id";
+    where p.id_sucursal=$id_sucursal  
+    and p.quantity > 0 
+    ORDER BY p.id";
+  $productos = find_by_sql($sql);
+  return $productos;
+
+}
+
+function inventarioAgotado(){
+  global $db;
+  $id_sucursal=$_SESSION['id_sucursal'];
+  $sql = "select m.file_name,p.quantity,p.id,p.date,p.codigo_producto,p.name as nombre_prod,p.buy_price,p.sale_price,p.media_id,p.categorie_id,p.id_sucursal,c.name as nombre_suc,s.nombre_sucursal 
+    from products as p 
+    inner join categories as c ON p.categorie_id=c.id 
+    inner join sucursales as s ON p.id_sucursal=s.id
+    left join media as m ON m.id = p.media_id 
+    where p.id_sucursal=$id_sucursal 
+    and p.quantity <= 0 
+    ORDER BY p.id";
   $productos = find_by_sql($sql);
   return $productos;
 

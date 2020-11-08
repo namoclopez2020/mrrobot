@@ -1,11 +1,11 @@
 <?php
-  $page_title = 'PROUCTOS VIGENTES';
+  $page_title = 'PROUCTOS AGOTADOS';
   require_once('includes/load.php');
 
   // Checkin What level user has permission to view this page
   page_require_level(1);
   //capturar datos de la sucursal
-  $all_products = inventario();
+  $all_products = inventarioAgotado();
 ?>
 
 <!DOCTYPE html>

@@ -25,7 +25,7 @@
       </li>
       
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ventas
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">VENTAS
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="nueva_venta.php">Nueva venta</a></li>
@@ -45,6 +45,7 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="product.php">Lista de Productos</a></li>
+          <li><a href="product_agotado.php">Productos Agotados</a></li>
           <li><a href="categorie.php">Categorias</a></li>
         </ul>
       </li>
