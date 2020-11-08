@@ -25,8 +25,8 @@
 				    <div class="modal-content">
 				      <div class="modal-header">
 					    <a href="add_product.php" class="btn btn-primary">Agregar producto</a>
-              <a href="./FPDF/reportes/reporte_inventario.php" class="btn btn-warning " style="margin-right:30">Reporte</a>
-              <a href="./FPDF/reportes/lista_productos.php" class="btn btn-success pull-right" style="margin-left:10px">Exportar Lista</a>
+              <!-- <a href="./FPDF/reportes/reporte_inventario.php" class="btn btn-warning " style="margin-right:30">Reporte</a>
+              <a href="./FPDF/reportes/lista_productos.php" class="btn btn-success pull-right" style="margin-left:10px">Exportar Lista</a> -->
 				    </div>
 				  <div class="modal-body">
 					<div class="table-responsive">        
