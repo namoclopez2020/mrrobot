@@ -21,17 +21,12 @@
 
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-
-   
     <title><?php echo  $page_title;?></title>
-  
- 
-	
  	<!--estilos de bootstrap 3 <meta name="theme-color" content="#ffffff">-->
  	
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/> 
     <!--estilos de datepicker -->
-   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker3.min.css" />
 
       
     <!--datables CSS básico-->
@@ -45,10 +40,4 @@
  <!--estilos de la aplicacion -->          
 <link rel="stylesheet" href="libs/css/main.css" />
 <link href="./libs/css/bootstrap-annual.css" rel="stylesheet">  
-<link rel="stylesheet" type="text/css" href="./libs/css/style.css">
-
-
-        
-
-    
- 	 
+<link rel="stylesheet" type="text/css" href="./libs/css/style.css"> 	 

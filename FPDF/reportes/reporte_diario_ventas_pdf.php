@@ -14,7 +14,9 @@ class myPDF extends FPDF{
 
 	function header(){
 		$ruta_logo=$_SESSION['ruta_imagen'];
-		$this->Image('../../uploads/empresa/'.$ruta_logo,10,10,50,30);
+		if(trim($ruta_logo)){
+			$this->Image('../../uploads/empresa/'.$ruta_logo,10,10,50,30);
+		}
 		$this->SetFont('Arial','B',14);
 		$this->Cell(276,5,'REPORTE DIARIO GENERAL',0,0,'C');
 		$this->Ln();

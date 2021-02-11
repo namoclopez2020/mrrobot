@@ -1,5 +1,4 @@
 <style type="text/css">
-<!--
 table { vertical-align: top; }
 tr    { vertical-align: top; }
 td    { vertical-align: top; }
@@ -33,7 +32,6 @@ td    { vertical-align: top; }
 }
 table.page_footer {width: 100%; border: none; background-color: white; padding: 2mm;border-collapse:collapse; border: none;}
 }
--->
 </style>
 <?php 
 include("includes/load.php");
