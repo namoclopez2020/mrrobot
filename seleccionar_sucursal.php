@@ -1,9 +1,9 @@
 <?php
   ob_start();
-$page_title="Inicio de sesion";
+  $page_title="Inicio de sesion";
   require_once('includes/load.php');
   page_require_level(3);
-  $all_sucursales=find_all('sucursales');
+  $all_sucursales=find_all_sucursales_by_user();
  // if($session->isUserLoggedIn(true)) { redirect('admin.php', false);}
 ?>
  <?php include_once('layouts/header.php'); ?>
