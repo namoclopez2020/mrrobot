@@ -14,7 +14,7 @@ if(empty($errors)){
 
     //crea session con el id
     if(!($current_user1['status'] == 0)){
-  $session->login($user_id);
+      $session->login($user_id);
     //actualiza ultimo login
      updateLastLogIn($user_id);
      $session->msg("s", "Bienvenido a sistema de inventario  ");

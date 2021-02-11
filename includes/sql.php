@@ -718,6 +718,13 @@ function inventario(){
 
 }
 
+function find_all_sucursales_by_user(){
+    global $db;
+    $id_usuario=$_SESSION['user_id'];
+    $sql = "SELECT s.* FROM sucursales as s INNER JOIN users AS u ON u.id_sucursal = s.id WHERE u.id = '".$id_usuario."'";
+    return find_by_sql($sql);
+}
+
 function inventarioAgotado(){
   global $db;
   $id_sucursal=$_SESSION['id_sucursal'];
